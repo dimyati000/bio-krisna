@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMax slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9efff"/>
+      <stop offset="0.55" stop-color="#b6dff4"/>
+      <stop offset="1" stop-color="#7ea9d2"/>
+    </linearGradient>
+    <linearGradient id="snow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4fbff"/>
+      <stop offset="1" stop-color="#cde8f7"/>
+    </linearGradient>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2"/>
+    </filter>
+    <g id="pine">
+      <rect x="-6" y="92" width="12" height="60" rx="4" fill="#35577f"/>
+      <path d="M0 0-42 70h25L-58 118h38l-31 48H51l-31-48h38L17 70h25L0 0Z" fill="currentColor"/>
+      <path d="M-31 70h19L-43 111h28L-35 143h70l-20-32h28L12 70h19L0 18-31 70Z" fill="rgba(224,246,255,.58)"/>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="820" cy="185" r="130" fill="#eaf9ff" opacity=".23" filter="url(#soft)"/>
+
+  <path d="M0 650c190-85 345-70 520 5 155 66 330 62 515-8 196-74 370-62 565 11v342H0V650Z" fill="#8eb5d6" opacity=".62"/>
+  <path d="M0 725c205-92 382-77 568 4 164 71 342 70 522 1 176-68 345-58 510 18v252H0V725Z" fill="url(#snow)"/>
+
+  <g color="#7fa8cf" opacity=".58">
+    <use href="#pine" transform="translate(70 474) scale(.78)"/>
+    <use href="#pine" transform="translate(160 520) scale(.55)"/>
+    <use href="#pine" transform="translate(250 450) scale(.9)"/>
+    <use href="#pine" transform="translate(355 555) scale(.52)"/>
+    <use href="#pine" transform="translate(455 505) scale(.72)"/>
+    <use href="#pine" transform="translate(575 555) scale(.5)"/>
+    <use href="#pine" transform="translate(700 512) scale(.65)"/>
+    <use href="#pine" transform="translate(835 540) scale(.54)"/>
+    <use href="#pine" transform="translate(960 485) scale(.77)"/>
+    <use href="#pine" transform="translate(1080 545) scale(.5)"/>
+    <use href="#pine" transform="translate(1185 492) scale(.74)"/>
+    <use href="#pine" transform="translate(1325 520) scale(.58)"/>
+    <use href="#pine" transform="translate(1450 438) scale(.96)"/>
+    <use href="#pine" transform="translate(1555 505) scale(.68)"/>
+  </g>
+
+  <g color="#4e78aa" opacity=".9">
+    <use href="#pine" transform="translate(22 525) scale(1.25)"/>
+    <use href="#pine" transform="translate(116 605) scale(.86)"/>
+    <use href="#pine" transform="translate(236 548) scale(1.02)"/>
+    <use href="#pine" transform="translate(365 612) scale(.68)"/>
+    <use href="#pine" transform="translate(490 580) scale(.85)"/>
+    <use href="#pine" transform="translate(616 635) scale(.62)"/>
+    <use href="#pine" transform="translate(745 589) scale(.8)"/>
+    <use href="#pine" transform="translate(880 632) scale(.68)"/>
+    <use href="#pine" transform="translate(1015 570) scale(.92)"/>
+    <use href="#pine" transform="translate(1150 620) scale(.72)"/>
+    <use href="#pine" transform="translate(1274 545) scale(1.04)"/>
+    <use href="#pine" transform="translate(1406 600) scale(.8)"/>
+    <use href="#pine" transform="translate(1535 498) scale(1.28)"/>
+  </g>
+
+  <g color="#2f578c">
+    <use href="#pine" transform="translate(-5 630) scale(1.48)"/>
+    <use href="#pine" transform="translate(130 690) scale(1.02)"/>
+    <use href="#pine" transform="translate(305 664) scale(1.13)"/>
+    <use href="#pine" transform="translate(470 718) scale(.9)"/>
+    <use href="#pine" transform="translate(640 682) scale(1.06)"/>
+    <use href="#pine" transform="translate(810 724) scale(.86)"/>
+    <use href="#pine" transform="translate(990 682) scale(1.08)"/>
+    <use href="#pine" transform="translate(1165 716) scale(.9)"/>
+    <use href="#pine" transform="translate(1338 652) scale(1.18)"/>
+    <use href="#pine" transform="translate(1515 620) scale(1.5)"/>
+  </g>
+
+  <g transform="translate(92 768)">
+    <path d="M0 105h250v120H0z" fill="#31557c"/>
+    <path d="m-25 105 150-135 150 135Z" fill="#26476f"/>
+    <path d="m-12 91 137-123 137 123-31 0L125 1 20 91Z" fill="#ecf8ff"/>
+    <rect x="35" y="152" width="46" height="48" rx="3" fill="#ffd886"/>
+    <rect x="169" y="152" width="46" height="48" rx="3" fill="#ffd886"/>
+    <rect x="103" y="135" width="45" height="90" fill="#18344f"/>
+  </g>
+
+  <g transform="translate(1325 790)">
+    <path d="M0 80h210v145H0z" fill="#304d70"/>
+    <path d="m-20 80 125-110 125 110Z" fill="#203f63"/>
+    <path d="m-8 68 113-99 113 99h-25L105 0 18 68Z" fill="#effaff"/>
+    <rect x="32" y="132" width="40" height="48" rx="3" fill="#ffd66f"/>
+    <rect x="138" y="132" width="40" height="48" rx="3" fill="#ffd66f"/>
+    <rect x="85" y="117" width="40" height="108" fill="#142f49"/>
+  </g>
+
+  <path d="M0 905c230-24 405-18 602 11 233 34 450 36 667 2 132-20 241-24 331-13v95H0v-95Z" fill="#effaff"/>
+</svg>
