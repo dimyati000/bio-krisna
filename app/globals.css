@@ -1,9 +1,9 @@
 :root {
-  --text: #10243d;
-  --muted: #4b6782;
-  --glass: rgba(238, 250, 255, 0.66);
-  --glass-border: rgba(255, 255, 255, 0.78);
-  --shadow: rgba(30, 84, 130, 0.2);
+  --text: #252525;
+  --muted: #443b36;
+  --glass: #e4ddce;
+  --glass-border: #c7c1b5;
+  --shadow: c3b49e(30, 84, 130, 0.2);
 }
 
 * {
@@ -35,9 +35,57 @@ a {
   isolation: isolate;
   overflow: hidden;
   padding: 28px 18px 42px;
-  background:
-    linear-gradient(180deg, rgba(198, 239, 255, 0.88) 0%, rgba(167, 218, 242, 0.34) 50%, rgba(117, 171, 216, 0.12) 100%),
-    url("/winter-forest.svg") center bottom / cover no-repeat;
+  background: #b9e7fb;
+}
+
+.background-video {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.sound-toggle {
+  position: fixed;
+  top: max(16px, env(safe-area-inset-top));
+  right: max(16px, env(safe-area-inset-right));
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  color: var(--text);
+  background: rgba(238, 250, 255, 0.9);
+  box-shadow: 0 6px 20px var(--shadow);
+  backdrop-filter: blur(13px);
+  cursor: pointer;
+  transition: background 200ms ease, transform 200ms ease;
+}
+
+.sound-toggle svg {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.sound-toggle[aria-pressed="true"] {
+  color: #fff;
+  background: #10243d;
+}
+
+.sound-toggle:hover {
+  transform: translateY(-2px);
+}
+
+.sound-toggle:focus-visible {
+  outline: 3px solid #2382be;
+  outline-offset: 4px;
 }
 
 .page-shell::after {
@@ -68,29 +116,24 @@ a {
   align-items: center;
   text-align: center;
   padding: 22px 20px 20px;
-  border: 1px solid rgba(255, 255, 255, 0.38);
+  /* border: 1px solid rgba(255, 255, 255, 0.38); */
   border-radius: 34px;
-  background: rgba(222, 245, 255, 0.18);
+  /* background: rgba(222, 245, 255, 0.18); */
   box-shadow: 0 28px 90px rgba(29, 71, 116, 0.13);
   backdrop-filter: blur(5px);
 }
 
-.avatar-wrap {
-  display: grid;
-  place-items: center;
-  padding: 5px;
-  border-radius: 50%;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.9), rgba(182, 220, 243, 0.72));
-  box-shadow: 0 10px 30px rgba(36, 84, 128, 0.22);
+.logo-wrap {
+  width: 128px;
+  max-width: 100%;
 }
 
-.avatar {
+.brand-logo {
   display: block;
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: #d9f0fa;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
 }
 
 .username {
@@ -98,7 +141,7 @@ a {
   padding: 6px 13px;
   border-radius: 999px;
   color: #f8fcff;
-  background: rgba(24, 55, 84, 0.72);
+  background: #443b36;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.02em;
@@ -272,17 +315,11 @@ h1 {
   .page-shell {
     place-items: start center;
     padding-top: 24px;
-    background-position: 55% bottom;
   }
 
   .profile-card {
     padding: 17px 13px 16px;
     border-radius: 28px;
-  }
-
-  .avatar {
-    width: 82px;
-    height: 82px;
   }
 
   .username {
@@ -305,6 +342,12 @@ h1 {
   .social-link {
     min-height: 54px;
     padding-inline: 17px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-shell {
+    padding-top: 80px;
   }
 }
 

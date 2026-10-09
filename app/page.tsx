@@ -1,4 +1,5 @@
 import Image from "next/image";
+import BackgroundVideo from "./background-video";
 import {
   GitHubIcon,
   InstagramIcon,
@@ -58,6 +59,7 @@ const snowflakes = Array.from({ length: 28 }, (_, index) => ({
 export default function HomePage() {
   return (
     <main className="page-shell">
+      <BackgroundVideo />
       <div className="sky-glow" aria-hidden="true" />
 
       <div className="snow" aria-hidden="true">
@@ -76,20 +78,21 @@ export default function HomePage() {
       </div>
 
       <section className="profile-card" aria-label="Profile links">
-        <div className="avatar-wrap">
+        <div className="logo-wrap">
           <Image
-            src="/avatar-placeholder.svg"
-            alt="Foto profil"
-            width={112}
-            height={112}
+            src="/logo-genta.png"
+            alt="Logo PT. Krisna Genta Winangun"
+            width={128}
+            height={167}
+            sizes="128px"
             priority
-            className="avatar"
+            className="brand-logo"
           />
         </div>
 
-        <p className="username">@username</p>
-        <h1>My Digital Space</h1>
-        <p className="intro">Temukan semua profil dan karya saya dalam satu tempat.</p>
+        <p className="username">@krisnagentawinangun</p>
+        <h1>PT. Krisna Genta Winangun</h1>
+        <p className="intro">Temukan profil & karya kami dalam satu tempat.</p>
 
         <nav className="social-list" aria-label="Social media links">
           {socialLinks.map((link) => (
@@ -111,7 +114,7 @@ export default function HomePage() {
           ))}
         </nav>
 
-        <p className="footer-note">Made with Next.js</p>
+        <p className="footer-note">Made with  by RESONANCE</p>
       </section>
     </main>
   );

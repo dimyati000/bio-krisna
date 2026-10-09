@@ -17,7 +17,7 @@ Buka `http://localhost:3000`.
 2. Ganti `public/avatar-placeholder.svg` dengan foto sendiri, misalnya `public/profile.jpg`.
 3. Setelah mengganti file foto, ubah nilai `src` di `app/page.tsx` menjadi `/profile.jpg`.
 4. Warna, ukuran, animasi, dan tampilan mobile berada di `app/globals.css`.
-5. Ilustrasi background berada di `public/winter-forest.svg`.
+5. Video background berada di `public/IMG_8234.mp4`; ubah `src` video di `app/background-video.tsx` jika mengganti file. Video mulai tanpa suara, dan tombol di pojok kanan atas menyalakan atau mematikan suaranya.
 
 ## Build production
 
